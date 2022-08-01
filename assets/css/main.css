@@ -1,24 +1,83 @@
 /* 
 #1E1C1C = Blackish
 #212121 = Grayish
-#FF4545 = Redish
+white = Redish
 */
-body {
-    background-color: black;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-.stopScroll {
-    overflow: hidden;
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1E1C1C;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    overflow-x: hidden;
+    height: auto;
+    width: 100%;
 }
 
 h1 {
-    font-family: 'Roboto';
-    font-weight: 700;
-    color: #FF4545;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: black;
     margin: 0 0 5% 0;
+}
+
+.burger-nav {
+    position: fixed;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    top: -500;
+    left: 0;
+    background-color: black;
+    z-index: 99;
+    transition: 1s;
+}
+
+.burger-nav .nav-labels {
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    padding: 2% 0;
+    background-color: black;
+    border: none;
+}
+
+.burger-nav .nav-labels:hover {
+    background-color: #1E1C1C;
+}
+
+.burger-nav .socials {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.burger-nav .socials i {
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+.show {
+    top: 100;
+    transition: 0.3s;
 }
 
 .navbar {
@@ -39,24 +98,41 @@ h1 {
     height: 100%;
 }
 
+.navbar .column .logo-name {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    letter-spacing: -1px;
+    visibility: hidden;
+}
+
 .navbar .column .logo {
     margin: 2% 5%;
-    width: 100px;
+    width: 80px;
     height: auto;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .navbar .column .logo:hover {
-    width: 105px;
+    width: 85px;
     height: auto;
 }
 
+.navbar .logo-mid {
+    display: none;
+    width: 80px;
+    height: auto;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .navbar .column .buttons {
-    font-family: 'Nunito';
-    font-weight: 700;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1em;
-    color: #FF4545;
+    color: white;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -69,18 +145,38 @@ h1 {
 
 .navbar .column .buttons:hover {
     font-size: 1.4em;
+    color: black;
+    background-color: white;
 }
 
-.burger {
-    opacity: 0;
+.navbar .column .socials {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .column .socials i {
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+.fa-bars {
+    visibility: hidden;
     font-size: 1.5em;
-    color: #FF4545;
+    color: white;
     cursor: pointer;
     transition: 0.3s;
+    transform: rotate(360deg);
 }
 
-.burger:hover {
+.fa-bars:hover {
     font-size: 2em;
+}
+
+.fa-xmark {
+    transition: 0.3s;
+    transform: rotate(180deg);
 }
 
 .main {
@@ -111,10 +207,10 @@ h1 {
 }
 
 .main .buttons {
-    font-family: 'Nunito';
-    font-weight: 700;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1em;
-    color: #FF4545;
+    color: white;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -127,59 +223,116 @@ h1 {
 
 .about {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5% 0;
     overflow: hidden;
+    padding: 5% 0;
 }
 
-.about .profile-picture {
+.about .info {
+    width: 50%;
+    margin: 5% 0;
+    padding: 0 3%;
+}
+
+.about .info .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.about .info .container:hover {
+    box-shadow: -1px 4px 29px 6px rgba(0, 0, 0, 1);
+}
+
+
+.about .info .container .profile-picture {
     border-radius: 50%;
     height: auto;
     width: 100%;
     max-width: 500px;
+    padding: 5% 0;
 }
 
-.about .label {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 3em;
+.about .info .container .labels {
+    font-family: 'Poppins';
+    font-weight: 400;
     color: white;
+    text-align: center;
     margin: 5% 0;
+}
+
+.about .info .container .labels .label.name {
+    font-size: 1.7em;
+}
+
+.about .info .container .labels .label.loc {
+    font-size: 1.3em;
+}
+
+.about .say {
+    width: 50%;
+    margin: 5% 0;
+    padding: 0 3%;
+}
+
+.about .say .container {
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about .say .container label {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.5em;
+    color: black;
     text-align: center;
 }
 
 .certifications {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5% 0;
 }
 
 .certifications .cards {
     display: flex;
+    height: fit-content;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .certifications .cards .badge {
-    padding: 2%;
+    padding: 4%;
+    margin: 1%;
     cursor: pointer;
     width: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: black;
     transition: 0.3s;
 }
 
 .certifications .cards .badge:hover {
-    width: 220px;
+    box-shadow: -1px 4px 29px 6px rgba(0, 0, 0, 1);
 }
 
 .backdrop {
@@ -206,7 +359,7 @@ h1 {
 
 .modal .container {
     display: none;
-    background-color: #212121;
+    background-color: black;
     border-radius: 10px;
     width: 500px;
     height: auto;
@@ -220,7 +373,7 @@ h1 {
 
 .modal .container .header .fa-solid.fa-xmark {
     margin-left: auto;
-    color: #FF4545;
+    color: white;
     font-size: 30px;
     cursor: pointer;
     transition: 0.3s;
@@ -246,26 +399,26 @@ h1 {
 
 .modal .container .body .badge-label {
     margin: 5% 0;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1.5em;
     color: white;
 }
 
 .modal .container .body .badge-issue {
     margin: 1% 0;
-    font-family: 'Roboto';
-    font-weight: 500;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1em;
     color: white;
 }
 
 .modal .container .body .badge-actual {
     margin: 1% 0;
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1em;
-    color: #FF4545;
+    color: white;
 }
 
 .modal .container .footer {
@@ -281,12 +434,12 @@ h1 {
 }
 
 .modal .container .footer .button {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 1em;
-    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.2em;
+    color: black;
     padding: 5%;
-    background-color: #FF4545;
+    background-color: white;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -299,7 +452,51 @@ h1 {
     box-shadow: 0px 4px 4px #1E1C1C;
 }
 
+footer {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+footer label {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    letter-spacing: -1px;
+}
+
+footer .socials {
+    display: flex;
+    margin: 20px;
+    width: auto;
+}
+
+footer .socials i {
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+footer .year {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    color: #656565;
+    letter-spacing: -1px;
+}
+
 @media only screen and (max-width: 1000px) {
+    .burger-nav {
+        display: flex;
+    }
+
     .navbar .column {
         justify-content: center;
     }
@@ -309,6 +506,27 @@ h1 {
     }
 
     .burger {
-        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar .socials {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about .info {
+        width: 100%;
+    }
+
+    .about .say {
+        width: 100%;
+    }
+
+    .certifications {
+        height: auto;
     }
 }

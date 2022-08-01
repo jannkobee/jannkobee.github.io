@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets\css\main.css">
         <link rel="icon" type="image/x-icon" href="images\logo.png">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,400&family=Roboto:wght@400;500;700&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,12 +35,40 @@
             <div class="column">
                 <img class="logo" src="images\logo.png">
             </div>
-            <div class="column">
-                <button class="buttons">Home</button>
-                <button class="buttons">About</button>
-                <button class="buttons">Certifications</button>
-                <button class="buttons">Contact</button>
+            <div class="column" style="justify-content: center;">
+                <button value="home" class="buttons">Home</button>
+                <button value="about" class="buttons">About</button>
+                <button value="certifications" class="buttons">Certifications</button>
+                <button value="works" class="buttons">Works</button>
                 <i class="fa-solid fa-bars burger"></i>
+            </div>
+            <div class="column socials" style="justify-content: center;">
+                <div class="socials">
+                    <a href="https://www.facebook.com/Jannkobee/" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Jannkobee" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/jannkobee/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jan-kobe-ignacio-26761814a/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/jannkobee" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="burger-nav">
+            <button value="home" class="nav-labels">Home</button>
+            <button value="about" class="nav-labels">About</button>
+            <button value="certifications" class="nav-labels">Certifications</button>
+            <button value="works" class="nav-labels">Works</button>
+            <div class="socials">
+                <a href="https://www.facebook.com/Jannkobee/" target="_blank"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/Jannkobee" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/jannkobee/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jan-kobe-ignacio-26761814a/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/jannkobee" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
             </div>
         </div>
         <div class="main">
@@ -52,8 +78,24 @@
             <img class="logo" src="images\logo.png">
         </div>
         <div class="about">
-            <img class="profile-picture" src="images\profile.jpg">
-            <label class="label">Jan Kobe Ignacio</label>
+            <div class="info">
+                <div class="container">
+                    <img class="profile-picture" src="images\profile.jpg">
+                    <div class="labels">
+                        <label class="label name">Jan Kobe Ignacio</label><br>
+                        <label class="label loc">Taguig City, Philippines</label>
+                    </div>
+                </div>
+            </div>
+            <div class="say">
+                <div class="container">
+                    <label>
+                        "I am a student at FEU Institute of Technology currently taking up a Bachelor of Science in
+                        Information Technology with a specialization in Web and Mobile Applications. I will be
+                        graduating in December 2022."
+                    </label>
+                </div>
+            </div>
         </div>
         <div class="certifications">
             <div class="cards">
@@ -66,6 +108,20 @@
                 <img certtype="database" class="badge" src="images\dbf_badge.png">
             </div>
         </div>
+        <footer>
+            <label>Jan Kobe Ignacio</label>
+            <div class="socials">
+                <a href="https://www.facebook.com/Jannkobee/" target="_blank"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/Jannkobee" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/jannkobee/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jan-kobe-ignacio-26761814a/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/jannkobee" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+            </div>
+            <label class="year">2022</label>
+        </footer>
     </body>
     <script src="assets\js\portfolio.js"></script>
 

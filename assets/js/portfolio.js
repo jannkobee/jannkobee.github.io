@@ -1,4 +1,38 @@
 $(document).ready(function () {
+  $(".navbar .column .buttons, .burger-nav .nav-labels").click(function () {
+    let nav = $(this).val();
+    if (nav == "home") {
+      let offset = $(".main").offset();
+      $("html, body").animate({
+        scrollTop: offset.top,
+      });
+    } else if (nav == "about") {
+      let offset = $(".about").offset();
+      offset.top += 50;
+      $("html, body").animate({
+        scrollTop: offset.top,
+      });
+    } else if (nav == "certifications") {
+      let offset = $(".certifications").offset();
+      offset.top -= 50;
+      $("html, body").animate({
+        scrollTop: offset.top,
+      });
+    }
+  });
+
+  $(`.modal .container .header .fa-solid.fa-xmark`).click(function () {
+    $("body").removeClass("stopScroll");
+    $(".backdrop").css("display", "none");
+    $(".modal").css("display", "none");
+    $(".modal .container").hide();
+  });
+
+  $(".navbar .column .burger").click(function () {
+    $(".navbar .column .burger").toggleClass("fa-xmark");
+    $(".burger-nav").toggleClass("show");
+  });
+
   $(`.badge`).click(function () {
     let badge = $(this).attr("certtype");
     if (!$("body").hasClass("stopScroll")) {
@@ -101,12 +135,5 @@ $(document).ready(function () {
         );
       }
     }
-
-    $(`.modal .container .header .fa-solid.fa-xmark`).click(function () {
-      $("body").removeClass("stopScroll");
-      $(".backdrop").css("display", "none");
-      $(".modal").css("display", "none");
-      $(".modal .container").hide();
-    });
   });
 });
