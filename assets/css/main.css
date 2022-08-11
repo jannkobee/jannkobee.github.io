@@ -19,6 +19,11 @@ white = Redish
     background: #1E1C1C;
 }
 
+hr{
+    width: 90%;
+    border: 0.5px solid black;
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -335,6 +340,43 @@ h1 {
     box-shadow: -1px 4px 29px 6px rgba(0, 0, 0, 1);
 }
 
+.works {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .cards{
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.works .cards .project_container{
+    padding: 4%;
+    margin: 1%;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: black;
+    transition: 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .cards .project_container .project{
+    width: 250px;
+    height: auto;
+}
+
 .backdrop {
     position: fixed;
     display: none;
@@ -492,7 +534,7 @@ footer .year {
     letter-spacing: -1px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1368px) {
     .burger-nav {
         display: flex;
     }
@@ -527,6 +569,10 @@ footer .year {
     }
 
     .certifications {
+        height: auto;
+    }
+
+    .works{
         height: auto;
     }
 }
