@@ -372,6 +372,10 @@ h1 {
     align-items: center;
 }
 
+.works .cards .project_container:hover{
+    box-shadow: -1px 4px 29px 6px rgba(0, 0, 0, 1);
+}
+
 .works .cards .project_container .project{
     width: 250px;
     height: auto;

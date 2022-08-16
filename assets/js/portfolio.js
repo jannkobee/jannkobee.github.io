@@ -18,6 +18,12 @@ $(document).ready(function () {
       $("html, body").animate({
         scrollTop: offset.top,
       });
+    } else if (nav == "works") {
+      let offset = $(".works").offset();
+      offset.top -= 50;
+      $("html, body").animate({
+        scrollTop: offset.top,
+      });
     }
   });
 
