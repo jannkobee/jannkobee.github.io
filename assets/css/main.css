@@ -32,6 +32,10 @@ body {
     width: 100%;
 }
 
+.stopScroll{
+    overflow: hidden;
+}
+
 h1 {
     font-family: 'Poppins';
     font-weight: 400;

@@ -32,6 +32,8 @@ $(document).ready(function () {
     $(".backdrop").css("display", "none");
     $(".modal").css("display", "none");
     $(".modal .container").hide();
+    $(`.modal .container .body`).empty();
+    $(`.modal .container .footer`).empty();
   });
 
   $(".navbar .column .burger").click(function () {
@@ -40,6 +42,15 @@ $(document).ready(function () {
   });
 
   $(`.badge`).click(function () {
+    $(`.modal .container .body`).append(`
+      <img class="badge" src="">
+      <label class="badge-label"></label>
+      <label class="badge-issue">Issued by: <span class="badge-actual by"></span></label>
+      <label class="badge-issue">Issued on: <span class="badge-actual on"></span></label>
+    `);
+    $(`.modal .container .footer`).append(`
+      <a href="" target="_blank"><button class="button">View in Credly</button></a>
+    `);
     let badge = $(this).attr("certtype");
     if (!$("body").hasClass("stopScroll")) {
       $("body").addClass("stopScroll");
@@ -142,4 +153,18 @@ $(document).ready(function () {
       }
     }
   });
+  // $(`.works`).click(function () {
+  //   $(`.modal .container .body`).append(`
+
+  //   `);
+  //   $(`.modal .container .footer`).append(`
+
+  //   `);
+  //   if (!$("body").hasClass("stopScroll")) {
+  //     $("body").addClass("stopScroll");
+  //     $(".backdrop").css("display", "flex");
+  //     $(".modal").css("display", "flex");
+  //     $(".modal .container").show("fast", "linear");
+  //   }
+  // });
 });
