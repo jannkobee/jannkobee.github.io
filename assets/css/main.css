@@ -381,7 +381,7 @@ h1 {
 }
 
 .works .cards .project_container .project{
-    width: 250px;
+    width: 400px;
     height: auto;
 }
 
@@ -582,5 +582,9 @@ footer .year {
 
     .works{
         height: auto;
+    }
+
+    .works .cards .project_container .project{
+        width: 250px;
     }
 }
