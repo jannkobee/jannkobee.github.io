@@ -118,14 +118,14 @@ h1 {
 
 .navbar .column .logo {
     margin: 2% 5%;
-    width: 80px;
+    width: 70px;
     height: auto;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .navbar .column .logo:hover {
-    width: 85px;
+    width: 75px;
     height: auto;
 }
 
@@ -203,7 +203,7 @@ h1 {
     position: absolute;
     display: flex;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
 }
 
@@ -543,6 +543,10 @@ footer .year {
 }
 
 @media only screen and (max-width: 1368px) {
+    .main .logo{
+        max-width: 300px;
+    }
+
     .burger-nav {
         display: flex;
     }
@@ -569,7 +573,7 @@ footer .year {
     }
 
     .about .info {
-        width: 100%;
+        width: 95%;
     }
 
     .about .say {
@@ -586,5 +590,21 @@ footer .year {
 
     .works .cards .project_container .project{
         width: 250px;
+    }
+    
+    .about .info .container .profile-picture {
+        max-width: 250px;
+    }
+
+    .about .info .container .labels {
+        font-size: 0.8em;
+    }
+
+    .about .say .container{
+        padding: 0 5%;
+    }
+
+    .about .say .container label{
+        font-size: 1.2em;
     }
 }
