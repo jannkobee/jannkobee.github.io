@@ -382,6 +382,7 @@ h1 {
 .works .cards .project_container .project {
     width: 400px;
     height: 500px;
+    object-fit: cover;
 }
 
 .backdrop {
