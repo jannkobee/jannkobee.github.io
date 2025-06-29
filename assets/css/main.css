@@ -19,7 +19,7 @@ white = Redish
     background: #1E1C1C;
 }
 
-hr{
+hr {
     width: 90%;
     border: 0.5px solid black;
 }
@@ -32,7 +32,7 @@ body {
     width: 100%;
 }
 
-.stopScroll{
+.stopScroll {
     overflow: hidden;
 }
 
@@ -353,7 +353,7 @@ h1 {
     align-items: center;
 }
 
-.works .cards{
+.works .cards {
     display: flex;
     height: fit-content;
     justify-content: center;
@@ -361,7 +361,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.works .cards .project_container{
+.works .cards .project_container {
     padding: 4%;
     margin: 1%;
     cursor: pointer;
@@ -375,13 +375,13 @@ h1 {
     align-items: center;
 }
 
-.works .cards .project_container:hover{
+.works .cards .project_container:hover {
     box-shadow: -1px 4px 29px 6px rgba(0, 0, 0, 1);
 }
 
-.works .cards .project_container .project{
+.works .cards .project_container .project {
     width: 400px;
-    height: auto;
+    height: 500px;
 }
 
 .backdrop {
@@ -542,7 +542,7 @@ footer .year {
 }
 
 @media only screen and (max-width: 1368px) {
-    .main .logo{
+    .main .logo {
         max-width: 300px;
     }
 
@@ -583,14 +583,14 @@ footer .year {
         height: auto;
     }
 
-    .works{
+    .works {
         height: auto;
     }
 
-    .works .cards .project_container .project{
+    .works .cards .project_container .project {
         width: 250px;
     }
-    
+
     .about .info .container .profile-picture {
         max-width: 250px;
     }
@@ -599,11 +599,11 @@ footer .year {
         font-size: 0.8em;
     }
 
-    .about .say .container{
+    .about .say .container {
         padding: 0 5%;
     }
 
-    .about .say .container label{
+    .about .say .container label {
         font-size: 1.2em;
     }
 }
